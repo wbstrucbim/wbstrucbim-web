@@ -1,99 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>WB StrucBim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WB StrucBIM SAC | Ingeniería Estructural</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    :root {
+      --primary: #0f172a;   /* azul oscuro */
+      --accent: #2563eb;    /* azul técnico */
+      --text: #1f2933;
+      --light: #f9fafb;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      background: #f5f7fa;
-    }
-    header {
-      background: #0b3c5d;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #0b3c5d;
-    }
-    .services ul {
-      list-style: none;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
     }
-    .services li {
+
+    body {
       background: white;
-      margin-bottom: 10px;
-      padding: 15px;
-      border-left: 4px solid #0b3c5d;
+      color: var(--text);
+      line-height: 1.6;
     }
+
+    header {
+      background: var(--light);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.8rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: var(--primary);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 1.8rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .why-us {
+      background: #f1f5f9;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
     footer {
-      background: #0b3c5d;
+      background: var(--primary);
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      padding: 2rem 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>WB StrucBim</h1>
-  <p><em>Modelamos el futuro, construimos confianza</em></p>
-  <p>Diseño estructural sismorresistente para viviendas</p>
-</header>
+  <!-- HERO -->
+  <header>
+    <img src="logo.png" alt="WB StrucBIM SAC">
+    <h1>WB STRUCBIM SAC</h1>
+    <p>Modelamos el futuro, construimos confianza</p>
+    <a href="#" class="btn">Contáctanos</a>
+  </header>
 
-<section>
-  <h2>¿Quiénes somos?</h2>
-  <p>
-    WB StrucBim es una empresa de ingeniería civil especializada en el diseño
-    estructural sismorresistente de viviendas, enfocada en brindar seguridad,
-    confianza y soluciones técnicas de calidad.
-  </p>
-</section>
+  <!-- SERVICIOS -->
+  <section>
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Diseño estructural sismorresistente</h3>
+        <p>Soluciones estructurales seguras y eficientes, cumpliendo la normativa peruana vigente.</p>
+      </div>
+      <div class="card">
+        <h3>Modelamiento BIM</h3>
+        <p>Modelos inteligentes para una mejor coordinación, control y visualización del proyecto.</p>
+      </div>
+      <div class="card">
+        <h3>Planos estructurales</h3>
+        <p>Planos técnicos detallados y listos para ejecución en obra.</p>
+      </div>
+      <div class="card">
+        <h3>Licencia de construcción</h3>
+        <p>Acompañamiento técnico para la obtención de licencias municipales.</p>
+      </div>
+      <div class="card">
+        <h3>Declaratoria de fábrica</h3>
+        <p>Regularización técnica y documental de edificaciones.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="services">
-  <h2>Servicios</h2>
-  <ul>
-    <li>Diseño estructural sismorresistente</li>
-    <li>Modelamiento BIM</li>
-    <li>Planos estructurales</li>
-    <li>Licencia de construcción</li>
-    <li>Declaratoria de fábrica</li>
-  </ul>
-</section>
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="why-us">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="why-grid">
+      <div class="card">Especialistas en diseño sismorresistente</div>
+      <div class="card">Enfoque BIM y tecnología moderna</div>
+      <div class="card">Atención personalizada</div>
+      <div class="card">Compromiso y responsabilidad profesional</div>
+    </div>
+  </section>
 
-<section>
-  <h2>Contacto</h2>
-  <p>
-    📧 Correo: wbstrucbim@gmail.com <br>
-    📱 WhatsApp: Próximamente
-  </p>
-</section>
-
-<footer>
-  © 2026 WB StrucBim – Ingeniería estructural
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 WB StrucBIM SAC – Ingeniería Estructural</p>
+  </footer>
 
 </body>
 </html>
+
 
 
   
