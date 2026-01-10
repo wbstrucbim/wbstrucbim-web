@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WB StrucBIM | Ingeniería Civil & Estructural</title>
+  <title>WB StrucBIM | Ingeniería Estructural</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -22,33 +22,70 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 50px 30px;
     }
 
-    header img {
-      width: 130px;
-      margin-bottom: 20px;
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 2.4rem;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand img {
+      width: 180px;
+    }
+
+    .brand-text h1 {
+      font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      line-height: 1.1;
     }
 
-    header p {
-      font-size: 1.1rem;
+    .brand-text p {
+      font-size: 1.2rem;
       opacity: 0.9;
+      margin-top: 5px;
     }
 
+    .contact-header {
+      text-align: right;
+      font-size: 0.95rem;
+    }
+
+    .contact-header a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
       padding: 60px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: #0f172a;
     }
 
     .services {
@@ -66,12 +103,27 @@
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .card h3 {
       margin-bottom: 10px;
       color: #0f172a;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 999;
     }
 
     footer {
@@ -81,49 +133,89 @@
       padding: 25px;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      .brand-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .brand img {
+        width: 140px;
+      }
+
+      .contact-header {
+        text-align: left;
+        margin-top: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="WB StrucBIM Logo">
-    <h1>WB StrucBIM</h1>
-    <p>Ingeniería Civil · Estructuras · BIM</p>
+    <div class="header-container">
+      <div class="brand">
+        <img src="logo.png" alt="WB StrucBIM">
+        <div class="brand-text">
+          <h1>WB StrucBIM</h1>
+          <p>Modelamos el futuro, construimos confianza</p>
+        </div>
+      </div>
+
+      <div class="contact-header">
+        <a href="mailto:strucbim@gmail.com">📧 strucbim@gmail.com</a>
+        <a href="https://wa.me/51999999999" target="_blank">📱 WhatsApp</a>
+      </div>
+    </div>
   </header>
 
+  <!-- SERVICIOS -->
   <section>
-    <h2 style="text-align:center; margin-bottom:40px;">Nuestros Servicios</h2>
+    <h2>Nuestros Servicios</h2>
 
     <div class="services">
       <div class="card">
-        <h3>Diseño Estructural</h3>
-        <p>Análisis y diseño sismorresistente de edificaciones conforme a la normativa vigente.</p>
+        <h3>Diseño estructural sismorresistente</h3>
+        <p>Diseño y análisis estructural conforme a la normativa peruana vigente.</p>
       </div>
 
       <div class="card">
-        <h3>Modelado BIM</h3>
-        <p>Modelado estructural y coordinación BIM para proyectos de ingeniería civil.</p>
+        <h3>Modelamiento BIM</h3>
+        <p>Modelos estructurales BIM para una correcta coordinación y control del proyecto.</p>
       </div>
 
       <div class="card">
-        <h3>Planos y Licencias</h3>
-        <p>Elaboración de planos estructurales y gestión de licencias de construcción.</p>
+        <h3>Planos estructurales</h3>
+        <p>Planos técnicos claros y listos para ejecución en obra.</p>
       </div>
 
       <div class="card">
-        <h3>Asesoría de Tesis</h3>
-        <p>Asesoría especializada en ingeniería estructural y proyectos académicos.</p>
+        <h3>Licencia de construcción</h3>
+        <p>Gestión técnica para la obtención de licencias municipales.</p>
+      </div>
+
+      <div class="card">
+        <h3>Declaratoria de fábrica</h3>
+        <p>Regularización técnica y legal de edificaciones.</p>
       </div>
     </div>
   </section>
 
+  <!-- WHATSAPP FLOAT -->
+  <a class="whatsapp" href="https://wa.me/51999999999" target="_blank">
+    WhatsApp
+  </a>
+
+  <!-- FOOTER -->
   <footer>
-    © 2026 WB StrucBIM · Ingeniería Civil y Estructural
+    © 2026 WB StrucBIM · Ingeniería Estructural
   </footer>
 
 </body>
 </html>
+
 
 
 
