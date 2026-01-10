@@ -2,90 +2,198 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>WB StrucBIM | Ingeniería Estructural</title>
+  <title>WB StrucBIM | Modelamos el futuro, construimos confianza</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#f4f6f8;color:#1f2933;line-height:1.6}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    header{
-      background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
+    body {
+      background: #f4f6f8;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
       url("https://images.unsplash.com/photo-1581093458791-9d15482778a1") center/cover;
-      color:white;padding:90px 8%;
+      color: white;
+      padding: 70px 8%;
     }
 
-    .header-grid{
-      display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
 
-    header img{width:180px;margin-bottom:20px}
-    header h1{font-size:3.6rem;font-weight:700}
-    header p{font-size:1.25rem;color:#cbd5e1;margin:15px 0 25px}
-
-    .header-buttons a{
-      display:inline-block;padding:14px 28px;border-radius:30px;
-      margin-right:15px;font-weight:600;text-decoration:none
-    }
-    .btn-primary{background:#2563eb;color:white}
-    .btn-outline{border:2px solid white;color:white}
-
-    .social-header a{
-      color:white;font-size:1.5rem;margin-right:18px;
-      transition:.3s
-    }
-    .social-header a:hover{color:#60a5fa}
-
-    .header-side{
-      border-left:3px solid #2563eb;
-      padding-left:35px;color:#e5e7eb
+    header img {
+      width: 140px;
     }
 
-    section{padding:80px 8%}
-    h2{font-size:2.4rem;margin-bottom:25px;position:relative}
-    h2::after{content:"";width:70px;height:4px;background:#2563eb;position:absolute;bottom:-12px;left:0}
-
-    .services{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px
-    }
-    .card{
-      background:white;padding:30px;border-radius:18px;
-      box-shadow:0 10px 25px rgba(0,0,0,.08);
-      transition:.3s
-    }
-    .card:hover{transform:translateY(-6px)}
-    .card i{font-size:2.3rem;color:#2563eb;margin-bottom:15px}
-
-    .contact-box{
-      background:linear-gradient(135deg,#1e3a8a,#2563eb);
-      color:white;padding:55px;border-radius:24px;
-      display:grid;gap:18px
-    }
-    iframe{width:100%;height:320px;border-radius:18px;margin-top:35px}
-
-    .whatsapp{
-      position:fixed;bottom:25px;right:25px;
-      background:#25d366;color:white;
-      padding:16px 18px;border-radius:50%;
-      font-size:1.6rem;z-index:1000
+    header h1 {
+      font-size: 3.4rem;
+      font-weight: 700;
     }
 
-    footer{
-      background:#0f172a;color:#cbd5e1;
-      text-align:center;padding:35px;font-size:.95rem
+    header p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      color: #cbd5e1;
     }
-    footer a{color:#cbd5e1;margin:0 10px;font-size:1.4rem}
 
-    @media(max-width:900px){
-      .header-grid{grid-template-columns:1fr;text-align:center}
-      header img{margin:auto}
-      .header-side{border:none;padding:0;margin-top:30px}
+    /* GENERAL SECTIONS */
+    section {
+      padding: 80px 8%;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 70px;
+      height: 4px;
+      background: #2563eb;
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card i {
+      font-size: 2.4rem;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+
+    /* WHY US */
+    .why {
+      background: #eef2ff;
+      border-radius: 24px;
+      padding: 60px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* PROCESS */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    }
+
+    .step span {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 55px;
+      border-radius: 24px;
+      display: grid;
+      gap: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
+    }
+
+    .contact-box i {
+      margin-right: 12px;
+      font-size: 1.3rem;
+    }
+
+    .contact-box a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #0f172a;
+      color: #cbd5e1;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -93,26 +201,11 @@
 <body>
 
 <header>
-  <div class="header-grid">
+  <div class="header-content">
+    <img src="logo.png" alt="WB StrucBIM Logo">
     <div>
-      <img src="logo.png" alt="WB StrucBIM">
       <h1>WB StrucBIM</h1>
       <p>Modelamos el futuro, construimos confianza</p>
-
-      <div class="header-buttons">
-        <a href="https://wa.me/51999999999" class="btn-primary">WhatsApp</a>
-        <a href="#contacto" class="btn-outline">Contacto</a>
-      </div>
-
-      <div class="social-header" style="margin-top:25px;">
-        <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </div>
-
-    <div class="header-side">
-      Empresa de ingeniería civil especializada en diseño estructural sismorresistente
-      y modelamiento BIM, orientada a proyectos de vivienda seguros y eficientes.
     </div>
   </div>
 </header>
@@ -120,25 +213,57 @@
 <section>
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card"><i class="fa-solid fa-building"></i><h3>Diseño estructural</h3></div>
+    <div class="card"><i class="fa-solid fa-building"></i><h3>Diseño estructural sismorresistente</h3></div>
     <div class="card"><i class="fa-solid fa-cubes"></i><h3>Modelamiento BIM</h3></div>
     <div class="card"><i class="fa-solid fa-drafting-compass"></i><h3>Planos estructurales</h3></div>
-    <div class="card"><i class="fa-solid fa-file-signature"></i><h3>Licencias</h3></div>
-    <div class="card"><i class="fa-solid fa-clipboard-check"></i><h3>Declaratoria</h3></div>
+    <div class="card"><i class="fa-solid fa-file-signature"></i><h3>Licencia de construcción</h3></div>
+    <div class="card"><i class="fa-solid fa-clipboard-check"></i><h3>Declaratoria de fábrica</h3></div>
   </div>
 </section>
 
-<section id="contacto">
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="why">
+    <div class="why-grid">
+      <div class="card"><i class="fa-solid fa-shield-halved"></i><h3>Seguridad estructural</h3><p>Diseños conforme a normativa sismorresistente vigente.</p></div>
+      <div class="card"><i class="fa-solid fa-microchip"></i><h3>Tecnología BIM</h3><p>Modelamiento preciso y detección temprana de interferencias.</p></div>
+      <div class="card"><i class="fa-solid fa-user-check"></i><h3>Atención personalizada</h3><p>Acompañamiento técnico desde la idea hasta la ejecución.</p></div>
+      <div class="card"><i class="fa-solid fa-scale-balanced"></i><h3>Cumplimiento normativo</h3><p>Proyectos listos para municipalidades y licencias.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Proceso de trabajo</h2>
+  <div class="process">
+    <div class="step"><span>1</span><p>Consulta y evaluación</p></div>
+    <div class="step"><span>2</span><p>Análisis y diseño estructural</p></div>
+    <div class="step"><span>3</span><p>Modelamiento BIM</p></div>
+    <div class="step"><span>4</span><p>Entrega y soporte técnico</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Sobre Nosotros</h2>
+  <div class="about">
+    <p>
+      WB StrucBIM es una empresa de ingeniería civil especializada en diseño estructural sismorresistente
+      y modelamiento BIM, enfocada en brindar soluciones técnicas seguras y confiables para proyectos de vivienda.
+    </p>
+    <div class="about-grid">
+      <div class="card"><h3>Misión</h3><p>Brindar soluciones estructurales seguras aplicando normativa y tecnología BIM.</p></div>
+      <div class="card"><h3>Visión</h3><p>Ser referentes en ingeniería estructural por nuestra confianza y profesionalismo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
   <h2>Contacto</h2>
   <div class="contact-box">
-    <div><i class="fa-solid fa-location-dot"></i> Pje. Leonardo Da Vinci 101, Jaén – Cajamarca</div>
-    <div><i class="fa-solid fa-envelope"></i> strucbim@gmail.com</div>
-    <div><i class="fa-brands fa-whatsapp"></i> WhatsApp directo</div>
+    <div><i class="fa-solid fa-location-dot"></i>Pje. Leonardo Da Vinci 101, Jaén – Cajamarca</div>
+    <a href="mailto:strucbim@gmail.com"><i class="fa-solid fa-envelope"></i>strucbim@gmail.com</a>
+    <a href="https://wa.me/51999999999" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp directo</a>
   </div>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Pje.%20Leonardo%20Da%20Vinci%20101%20Ja%C3%A9n%20Cajamarca&output=embed">
-  </iframe>
 </section>
 
 <a class="whatsapp" href="https://wa.me/51999999999" target="_blank">
@@ -147,14 +272,11 @@
 
 <footer>
   © 2026 WB StrucBIM – Ingeniería estructural<br>
-  Pje. Leonardo Da Vinci 101, Jaén – Cajamarca<br><br>
-  <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-  <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  Pje. Leonardo Da Vinci 101, Jaén – Cajamarca
 </footer>
 
 </body>
 </html>
-
 
 
 
