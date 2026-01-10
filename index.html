@@ -30,7 +30,7 @@
       background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
       url("https://images.unsplash.com/photo-1581093458791-9d15482778a1") center/cover;
       color: white;
-      padding: 60px 8%;
+      padding: 70px 8%;
     }
 
     .header-content {
@@ -40,38 +40,38 @@
     }
 
     header img {
-      width: 120px;
+      width: 140px;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.4rem;
       font-weight: 700;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-top: 10px;
       color: #cbd5e1;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
     section {
-      padding: 70px 8%;
+      padding: 80px 8%;
     }
 
     h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+      font-size: 2.4rem;
+      margin-bottom: 25px;
       position: relative;
     }
 
     h2::after {
       content: "";
-      width: 60px;
+      width: 70px;
       height: 4px;
       background: #2563eb;
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 0;
     }
 
@@ -84,9 +84,9 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.95);
+      background: white;
       padding: 30px;
-      border-radius: 14px;
+      border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: transform 0.3s;
     }
@@ -96,16 +96,52 @@
     }
 
     .card i {
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       color: #2563eb;
       margin-bottom: 15px;
+    }
+
+    /* WHY US */
+    .why {
+      background: #eef2ff;
+      border-radius: 24px;
+      padding: 60px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* PROCESS */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    }
+
+    .step span {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2563eb;
     }
 
     /* ABOUT */
     .about {
       background: white;
-      border-radius: 20px;
-      padding: 50px;
+      border-radius: 24px;
+      padding: 60px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.07);
     }
 
@@ -113,32 +149,32 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     /* CONTACT */
     .contact-box {
       background: linear-gradient(135deg, #1e3a8a, #2563eb);
       color: white;
-      padding: 50px;
-      border-radius: 20px;
+      padding: 55px;
+      border-radius: 24px;
       display: grid;
       gap: 20px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
+    }
+
+    .contact-box i {
+      margin-right: 12px;
+      font-size: 1.3rem;
     }
 
     .contact-box a {
       color: white;
       text-decoration: none;
-      font-size: 1.1rem;
     }
 
-    .contact-box i {
-      margin-right: 10px;
-      font-size: 1.3rem;
-    }
-
-    /* WHATSAPP BUTTON */
+    /* WHATSAPP */
     .whatsapp {
       position: fixed;
       bottom: 25px;
@@ -154,9 +190,10 @@
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       background: #0f172a;
       color: #cbd5e1;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -176,26 +213,33 @@
 <section>
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card">
-      <i class="fa-solid fa-building"></i>
-      <h3>Diseño estructural sismorresistente</h3>
+    <div class="card"><i class="fa-solid fa-building"></i><h3>Diseño estructural sismorresistente</h3></div>
+    <div class="card"><i class="fa-solid fa-cubes"></i><h3>Modelamiento BIM</h3></div>
+    <div class="card"><i class="fa-solid fa-drafting-compass"></i><h3>Planos estructurales</h3></div>
+    <div class="card"><i class="fa-solid fa-file-signature"></i><h3>Licencia de construcción</h3></div>
+    <div class="card"><i class="fa-solid fa-clipboard-check"></i><h3>Declaratoria de fábrica</h3></div>
+  </div>
+</section>
+
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="why">
+    <div class="why-grid">
+      <div class="card"><i class="fa-solid fa-shield-halved"></i><h3>Seguridad estructural</h3><p>Diseños conforme a normativa sismorresistente vigente.</p></div>
+      <div class="card"><i class="fa-solid fa-microchip"></i><h3>Tecnología BIM</h3><p>Modelamiento preciso y detección temprana de interferencias.</p></div>
+      <div class="card"><i class="fa-solid fa-user-check"></i><h3>Atención personalizada</h3><p>Acompañamiento técnico desde la idea hasta la ejecución.</p></div>
+      <div class="card"><i class="fa-solid fa-scale-balanced"></i><h3>Cumplimiento normativo</h3><p>Proyectos listos para municipalidades y licencias.</p></div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-cubes"></i>
-      <h3>Modelamiento BIM</h3>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-drafting-compass"></i>
-      <h3>Planos estructurales</h3>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-file-signature"></i>
-      <h3>Licencia de construcción</h3>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-clipboard-check"></i>
-      <h3>Declaratoria de fábrica</h3>
-    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Proceso de trabajo</h2>
+  <div class="process">
+    <div class="step"><span>1</span><p>Consulta y evaluación</p></div>
+    <div class="step"><span>2</span><p>Análisis y diseño estructural</p></div>
+    <div class="step"><span>3</span><p>Modelamiento BIM</p></div>
+    <div class="step"><span>4</span><p>Entrega y soporte técnico</p></div>
   </div>
 </section>
 
@@ -203,20 +247,12 @@
   <h2>Sobre Nosotros</h2>
   <div class="about">
     <p>
-      WB StrucBIM es una empresa de ingeniería civil especializada en el diseño estructural sismorresistente
-      y modelamiento BIM, enfocada en brindar soluciones técnicas seguras, eficientes y confiables para
-      proyectos de vivienda.
+      WB StrucBIM es una empresa de ingeniería civil especializada en diseño estructural sismorresistente
+      y modelamiento BIM, enfocada en brindar soluciones técnicas seguras y confiables para proyectos de vivienda.
     </p>
-
     <div class="about-grid">
-      <div class="card">
-        <h3>Misión</h3>
-        <p>Brindar soluciones estructurales seguras y eficientes, aplicando normativa vigente y tecnología BIM.</p>
-      </div>
-      <div class="card">
-        <h3>Visión</h3>
-        <p>Ser una empresa referente en ingeniería estructural reconocida por su profesionalismo y confianza.</p>
-      </div>
+      <div class="card"><h3>Misión</h3><p>Brindar soluciones estructurales seguras aplicando normativa y tecnología BIM.</p></div>
+      <div class="card"><h3>Visión</h3><p>Ser referentes en ingeniería estructural por nuestra confianza y profesionalismo.</p></div>
     </div>
   </div>
 </section>
@@ -224,21 +260,19 @@
 <section>
   <h2>Contacto</h2>
   <div class="contact-box">
-    <a href="mailto:strucbim@gmail.com">
-      <i class="fa-solid fa-envelope"></i> strucbim@gmail.com
-    </a>
-    <a href="https://wa.me/982409534" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp directo
-    </a>
+    <div><i class="fa-solid fa-location-dot"></i>Pje. Leonardo Da Vinci 101, Jaén – Cajamarca</div>
+    <a href="mailto:strucbim@gmail.com"><i class="fa-solid fa-envelope"></i>strucbim@gmail.com</a>
+    <a href="https://wa.me/51999999999" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp directo</a>
   </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/982409534" target="_blank">
+<a class="whatsapp" href="https://wa.me/51999999999" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <footer>
-  © 2026 WB StrucBIM – Ingeniería estructural
+  © 2026 WB StrucBIM – Ingeniería estructural<br>
+  Pje. Leonardo Da Vinci 101, Jaén – Cajamarca
 </footer>
 
 </body>
