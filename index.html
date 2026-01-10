@@ -2,97 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WB StrucBIM SAC | Ingeniería Estructural</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WB StrucBIM | Ingeniería Civil & Estructural</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --primary: #0f172a;   /* azul oscuro */
-      --accent: #2563eb;    /* azul técnico */
-      --text: #1f2933;
-      --light: #f9fafb;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: white;
-      color: var(--text);
+      background-color: #f4f6f8;
+      color: #1f2933;
       line-height: 1.6;
     }
 
     header {
-      background: var(--light);
-      padding: 3rem 1.5rem;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
 
     header img {
-      max-width: 180px;
-      margin-bottom: 1rem;
+      width: 130px;
+      margin-bottom: 20px;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
-      color: var(--primary);
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.1rem;
-      color: #555;
-      margin-top: 0.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.8rem 1.8rem;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #1d4ed8;
+      opacity: 0.9;
     }
 
     section {
-      padding: 4rem 1.5rem;
       max-width: 1100px;
       margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2.5rem;
-      color: var(--primary);
+      padding: 60px 20px;
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 25px;
     }
 
     .card {
-      background: var(--light);
-      padding: 1.8rem;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
@@ -100,90 +70,61 @@
     }
 
     .card h3 {
-      margin-bottom: 0.8rem;
-      color: var(--accent);
-      font-size: 1.1rem;
-    }
-
-    .why-us {
-      background: #f1f5f9;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
+      margin-bottom: 10px;
+      color: #0f172a;
     }
 
     footer {
-      background: var(--primary);
+      background: #0f172a;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    footer p {
+      padding: 25px;
       font-size: 0.9rem;
-      opacity: 0.9;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
   <header>
-    <img src="logo.png" alt="WB StrucBIM SAC">
-    <h1>WB STRUCBIM SAC</h1>
-    <p>Modelamos el futuro, construimos confianza</p>
-    <a href="#" class="btn">Contáctanos</a>
+    <img src="logo.png" alt="WB StrucBIM Logo">
+    <h1>WB StrucBIM</h1>
+    <p>Ingeniería Civil · Estructuras · BIM</p>
   </header>
 
-  <!-- SERVICIOS -->
   <section>
-    <h2>Servicios</h2>
+    <h2 style="text-align:center; margin-bottom:40px;">Nuestros Servicios</h2>
+
     <div class="services">
       <div class="card">
-        <h3>Diseño estructural sismorresistente</h3>
-        <p>Soluciones estructurales seguras y eficientes, cumpliendo la normativa peruana vigente.</p>
+        <h3>Diseño Estructural</h3>
+        <p>Análisis y diseño sismorresistente de edificaciones conforme a la normativa vigente.</p>
       </div>
+
       <div class="card">
-        <h3>Modelamiento BIM</h3>
-        <p>Modelos inteligentes para una mejor coordinación, control y visualización del proyecto.</p>
+        <h3>Modelado BIM</h3>
+        <p>Modelado estructural y coordinación BIM para proyectos de ingeniería civil.</p>
       </div>
+
       <div class="card">
-        <h3>Planos estructurales</h3>
-        <p>Planos técnicos detallados y listos para ejecución en obra.</p>
+        <h3>Planos y Licencias</h3>
+        <p>Elaboración de planos estructurales y gestión de licencias de construcción.</p>
       </div>
+
       <div class="card">
-        <h3>Licencia de construcción</h3>
-        <p>Acompañamiento técnico para la obtención de licencias municipales.</p>
-      </div>
-      <div class="card">
-        <h3>Declaratoria de fábrica</h3>
-        <p>Regularización técnica y documental de edificaciones.</p>
+        <h3>Asesoría de Tesis</h3>
+        <p>Asesoría especializada en ingeniería estructural y proyectos académicos.</p>
       </div>
     </div>
   </section>
 
-  <!-- POR QUÉ ELEGIRNOS -->
-  <section class="why-us">
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="why-grid">
-      <div class="card">Especialistas en diseño sismorresistente</div>
-      <div class="card">Enfoque BIM y tecnología moderna</div>
-      <div class="card">Atención personalizada</div>
-      <div class="card">Compromiso y responsabilidad profesional</div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 WB StrucBIM SAC – Ingeniería Estructural</p>
+    © 2026 WB StrucBIM · Ingeniería Civil y Estructural
   </footer>
 
 </body>
 </html>
+
 
 
 
