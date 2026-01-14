@@ -29,6 +29,37 @@
       background:#fff;
     }
 
+    /* TOP HEADER BLANCO */
+    .top-header{
+      background:#fff;
+      border-bottom:1px solid #e5e5e5;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .top-header img{
+      width:150px;
+    }
+
+    .top-contact{
+      font-size:.9rem;
+      display:flex;
+      gap:25px;
+    }
+
+    .top-contact span{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#111;
+    }
+
+    .top-contact i{
+      color:#25D366;
+    }
+
     /* WHATSAPP */
     .whatsapp-float{
       position:fixed;
@@ -48,7 +79,7 @@
       text-decoration:none;
     }
 
-    /* HEADER */
+    /* HERO */
     header{
       min-height:100vh;
       background:
@@ -57,22 +88,11 @@
       color:#fff;
     }
 
-    nav{
-      padding:25px 8%;
-      display:flex;
-      align-items:center;
-    }
-
-    nav img{
-      width:160px;
-      filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));
-    }
-
     .hero{
       max-width:1200px;
       margin:auto;
       padding:0 8%;
-      height:calc(100vh - 120px);
+      height:100vh;
       display:flex;
       align-items:center;
     }
@@ -143,7 +163,7 @@
       font-weight:700;
     }
 
-    /* ANIMACIÓN */
+    /* ANIMACIONES */
     .fade{
       opacity:0;
       transform:translateY(40px);
@@ -173,16 +193,10 @@
     .service-box i{
       font-size:2.3rem;
       margin-bottom:18px;
-      color:#111;
-    }
-
-    .service-box p{
-      font-weight:500;
     }
 
     .service-box:hover{
       transform:translateY(-10px);
-      box-shadow:0 18px 45px rgba(0,0,0,.15);
     }
 
     /* ABOUT */
@@ -190,7 +204,6 @@
       max-width:900px;
       margin:auto;
       text-align:center;
-      font-size:1.05rem;
     }
 
     /* MISIÓN VISIÓN */
@@ -207,41 +220,17 @@
       border-radius:18px;
     }
 
-    .mv-box h4{
-      font-size:1.4rem;
-      margin-bottom:15px;
-    }
-
     /* CONTACTO */
-    .contact{
-      text-align:center;
-      line-height:2.1;
-      font-size:1.05rem;
-    }
-
-    .socials a{
-      margin:0 12px;
-      font-size:1.5rem;
-      color:#111;
-      transition:.3s;
-    }
-
-    .socials a:hover{
-      color:#25D366;
-    }
-
     footer{
       background:#111;
       color:#fff;
       text-align:center;
       padding:30px;
       margin-top:50px;
-      font-size:.95rem;
     }
 
-    /* RESPONSIVE */
     @media(max-width:768px){
-      nav img{width:130px;}
+      .top-contact{display:none;}
       .hero-text h1{font-size:2.4rem;}
       .hero-text h2{font-size:1.25rem;}
     }
@@ -250,15 +239,20 @@
 
 <body>
 
+<!-- TOP HEADER -->
+<div class="top-header">
+  <img src="logo.png" alt="WB StrucBIM SAC">
+  <div class="top-contact">
+    <span><i class="fas fa-envelope"></i> strucbim@gmail.com</span>
+    <span><i class="fab fa-whatsapp"></i> 982 409 534</span>
+  </div>
+</div>
+
 <a class="whatsapp-float" href="https://wa.me/51982409534" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
 <header>
-  <nav>
-    <img src="logo.png" alt="WB StrucBIM SAC">
-  </nav>
-
   <div class="hero">
     <div class="hero-text">
       <h1>WB STRUCBIM SAC</h1>
@@ -274,53 +268,6 @@
     </div>
   </div>
 </header>
-
-<section class="fade">
-  <h3>Servicios</h3>
-  <div class="services">
-    <div class="service-box"><i class="fas fa-building"></i><p>Diseño estructural sismorresistente</p></div>
-    <div class="service-box"><i class="fas fa-cubes"></i><p>Modelamiento BIM</p></div>
-    <div class="service-box"><i class="fas fa-drafting-compass"></i><p>Planos estructurales</p></div>
-    <div class="service-box"><i class="fas fa-file-signature"></i><p>Licencia de construcción</p></div>
-    <div class="service-box"><i class="fas fa-home"></i><p>Declaratoria de fábrica</p></div>
-  </div>
-</section>
-
-<section class="fade">
-  <h3>Sobre Nosotros</h3>
-  <p class="about">
-    WB StrucBIM SAC es una empresa de ingeniería civil especializada en diseño
-    estructural y modelamiento BIM, orientada a viviendas seguras, eficientes
-    y plenamente normativas.
-  </p>
-</section>
-
-<section class="fade">
-  <h3>Misión y Visión</h3>
-  <div class="mv">
-    <div class="mv-box">
-      <h4>Misión</h4>
-      <p>Diseñar estructuras seguras y eficientes que protejan la inversión y la vida de las personas.</p>
-    </div>
-    <div class="mv-box">
-      <h4>Visión</h4>
-      <p>Ser una empresa referente en ingeniería estructural y modelamiento BIM a nivel regional.</p>
-    </div>
-  </div>
-</section>
-
-<section class="fade">
-  <h3>Contacto</h3>
-  <div class="contact">
-    <p><strong>📍 Dirección:</strong> Pje. Leonardo Da Vinci 101, Jaén – Cajamarca</p>
-    <p><strong>✉ Correo:</strong> strucbim@gmail.com</p>
-    <p><strong>📞 WhatsApp:</strong> 982 409 534</p>
-    <div class="socials">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</section>
 
 <footer>
   © 2026 WB StrucBIM SAC – Ingeniería Estructural
@@ -340,7 +287,6 @@
 
 </body>
 </html>
-
 
 
 
