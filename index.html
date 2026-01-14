@@ -33,7 +33,7 @@
     }
     .whatsapp-float:hover { transform: scale(1.1); }
 
-    /* --- HEADER PREMIUM OPTIMIZADO --- */
+    /* --- HEADER PREMIUM CON LOGO MAXIMIZADO --- */
     .top-header {
       background: var(--white);
       padding: 0 8%;
@@ -42,7 +42,7 @@
       align-items: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       position: sticky; top: 0; z-index: 1100;
-      height: 100px;
+      height: 120px; /* Altura generosa para el logo cuadrado */
     }
 
     .logo-container {
@@ -52,13 +52,15 @@
     }
 
     .logo-container img { 
-      height: 85px; /* Tamaño destacado */
+      height: 140px; /* Aumentado drásticamente */
       width: auto; 
       display: block;
+      transform: scale(1.4); /* Zoom extra para compensar los márgenes de la imagen */
+      transform-origin: left center;
       transition: 0.3s;
     }
 
-    /* Navegación central para llenar el vacío */
+    /* Navegación central */
     .nav-menu {
       display: flex;
       gap: 25px;
@@ -160,7 +162,8 @@
 
     @media (max-width: 992px) {
       .nav-menu, .header-contact { display: none; }
-      .top-header { justify-content: center; height: 90px; }
+      .top-header { justify-content: center; height: 100px; }
+      .logo-container img { transform: scale(1.1); height: 100px; }
       .mv-container { grid-template-columns: 1fr; }
     }
   </style>
@@ -185,7 +188,7 @@
 
     <div class="header-contact">
       <div class="header-contact-item">
-        <i class="far fa-envelope"></i>
+        <i class="far fa-comment-dots"></i>
         <div class="header-contact-text">
           <b>Escríbenos</b>
           strucbim@gmail.com
@@ -204,7 +207,7 @@
   <header class="hero-section">
     <div class="hero-content">
       <h1>WB STRUCBIM SAC</h1>
-      <p>Modelamos el futuro con ingeniería estructural sismorresistente. Diseños eficientes y seguros bajo la normativa peruana vigente.</p>
+      <p>Ingeniería estructural avanzada y modelamiento virtual de alta precisión. Aseguramos la integridad de tu edificación cumpliendo la normativa peruana sismorresistente.</p>
       <a href="https://wa.me/51982409534" class="btn-hero">Solicitar Presupuesto</a>
     </div>
   </header>
@@ -265,12 +268,13 @@
   <div class="cta-final fade">
     <h2 style="margin-bottom: 20px;">¿Necesitas asegurar tu proyecto?</h2>
     <p style="margin-bottom: 30px;">Conversa hoy mismo con un especialista en estructuras.</p>
-    <a href="https://wa.me/51982409534" class="btn-hero" style="background: var(--white); color: var(--primary);">Contactar por WhatsApp</a>
+    <a href="https://wa.me/51982409534" class="btn-hero" style="background: var(--white); color: var(--primary);">Contactar con un Especialista</a>
   </div>
 
   <div id="contacto" style="text-align: center; padding: 60px 8%; background: var(--white);">
     <p style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i> Pje. Leonardo Da Vinci 101, Jaén – Cajamarca</p>
     <p><i class="fas fa-envelope" style="color:var(--accent)"></i> strucbim@gmail.com</p>
+    <p><i class="fab fa-whatsapp" style="color:var(--accent)"></i> +51 982 409 534</p>
   </div>
 
   <footer>
@@ -294,4 +298,3 @@
 
 </body>
 </html>
-
