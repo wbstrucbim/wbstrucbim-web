@@ -39,4 +39,213 @@
     
     .main-nav { display: flex; gap: 30px; }
     .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: 0.3s; }
-    .nav-link:hover { color
+    .nav-link:hover { color: var(--accent-color); }
+    
+    .header-actions { display: flex; align-items: center; gap: 20px; }
+    .contact-mini { display: flex; flex-direction: column; text-decoration: none; color: var(--text-dark); font-size: 0.85rem; }
+    
+    /* Buttons */
+    .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; cursor: pointer; border: none; }
+    .btn-primary { background: var(--primary-color); color: #fff; }
+    .btn-primary:hover { background: #002244; transform: translateY(-2px); }
+    
+    /* Hero */
+    .hero { background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80') center/cover; padding: 100px 0; color: #fff; text-align: left; }
+    .hero h1 { font-size: 3.5rem; font-family: 'Poppins', sans-serif; margin-bottom: 20px; }
+    .hero .lead { font-size: 1.25rem; max-width: 700px; margin-bottom: 30px; opacity: 0.9; }
+
+    /* Features Strip */
+    .features-strip { background: var(--accent-color); color: #fff; padding: 20px 0; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; font-weight: 600; }
+
+    /* Sections */
+    .section { padding: 80px 0; }
+    .section-bg { background: var(--bg-light); }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-title { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; position: relative; display: inline-block; }
+
+    /* Services Cards */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .service-card { background: #fff; padding: 40px; border-radius: 10px; box-shadow: var(--shadow-sm); transition: 0.3s; border-bottom: 4px solid transparent; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-md); border-color: var(--accent-color); }
+    .service-icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px; }
+
+    /* About & Mission/Vision */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+    .about-text p { margin-bottom: 20px; text-align: justify !important; } /* Tu texto justificado */
+    .mv-card { background: #fff; padding: 30px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
+    .mv-card h4 { display: flex; align-items: center; gap: 10px; color: var(--primary-color); margin-bottom: 10px; }
+    
+    /* Footer */
+    .site-footer { background: #1a1a1a; color: #fff; padding: 60px 0 20px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { margin-bottom: 20px; color: var(--accent-color); }
+    .footer-contact-item { display: flex; gap: 10px; margin-bottom: 15px; align-items: start; }
+    .social-links { display: flex; gap: 15px; }
+    .social-link { color: #fff; font-size: 1.2rem; transition: 0.3s; }
+    .copyright { border-top: 1px solid #333; padding-top: 20px; text-align: center; font-size: 0.9rem; opacity: 0.6; }
+
+    /* WhatsApp Float */
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: var(--shadow-md); z-index: 1000; transition: 0.3s; }
+
+    /* CTA Section */
+    .cta-section { background: var(--primary-color); color: #fff; padding: 80px 0; text-align: center; }
+
+    /* --- AQUÍ ESTÁ LA MAGIA PARA EL CELULAR ---
+       No cambia nada de arriba, solo re-acomoda en móviles
+    */
+    @media (max-width: 768px) {
+      .brand-logo img { height: 60px !important; } /* Logo ajustado en móvil */
+      .header-actions { display: none; } /* Quitamos lo que amontona el header */
+      .main-nav { display: none; } /* Usar menú móvil si se requiere */
+      
+      .hero { padding: 60px 0; text-align: center; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero .lead { font-size: 1rem; margin: 0 auto 30px; }
+      .hero-actions { display: flex; flex-direction: column; gap: 10px; }
+      .hero-actions .btn { margin-right: 0 !important; width: 100%; }
+
+      /* Todo a una columna */
+      .features-grid, .services-grid, .about-grid, .footer-content {
+        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .about-text p { text-align: left !important; } /* Mejor lectura en móvil */
+      .section-title { font-size: 1.8rem; }
+      .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="whatsapp-float" href="https://wa.me/51982409534" target="_blank" aria-label="Chat en WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand-logo">
+        <a href="#">
+          <img src="logo2.png" alt="WB StrucBIM SAC Logo">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="mailto:strucbim@gmail.com" class="contact-mini">
+          <strong>Escríbenos</strong>
+          <span>strucbim@gmail.com</span>
+        </a>
+        <a href="https://wa.me/51982409534" class="btn btn-primary">Solicitar Cotización</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>WB STRUCBIM SAC</h1>
+        <p class="lead">Ingeniería estructural avanzada y modelamiento virtual de alta precisión. Aseguramos la
+          integridad de tu edificación cumpliendo la normativa peruana sismorresistente.</p>
+        <div class="hero-actions">
+          <a href="#servicios" class="btn btn-secondary" style="background: transparent; color: white; border: 1px solid white; margin-right: 10px;">Servicios</a>
+          <a href="https://wa.me/51982409534" class="btn btn-primary">Contactar Experto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-shield-alt"></i> Seguridad Sísmica</div>
+        <div class="feature-item"><i class="fas fa-microchip"></i> Tecnología BIM</div>
+        <div class="feature-item"><i class="fas fa-check-double"></i> Calidad Garantizada</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Servicios Especializados</h2>
+        <p>Soluciones integrales para la construcción moderna</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h3>Diseño Estructural</h3>
+          <p>Análisis y diseño de estructuras sismorresistentes optimizadas.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Modelamiento BIM</h3>
+          <p>Visualización y coordinación de interferencias antes de la obra.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+          <h3>Supervisión de Obra</h3>
+          <p>Control técnico riguroso para cumplimiento de planos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section section-bg">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2 class="section-title">Sobre Nosotros</h2>
+          <div class="about-text">
+            <p><strong>WB StrucBIM SAC</strong> es un estudio de ingeniería estructural comprometido con la excelencia técnica y la innovación.</p>
+            <p>Nuestro equipo está conformado por ingenieros apasionados por la seguridad y la precisión.</p>
+          </div>
+        </div>
+
+        <div class="mission-vision-wrapper">
+          <div class="mv-card">
+            <h4><i class="fas fa-bullseye"></i> Nuestra Misión</h4>
+            <p>Proteger la vida y la inversión mediante diseños seguros y bajo un riguroso cumplimiento de la normativa vigente.</p>
+          </div>
+          <div class="mv-card">
+            <h4><i class="fas fa-eye"></i> Nuestra Visión</h4>
+            <p>Ser la consultora líder en la transformación digital del sector construcción.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>WB StrucBIM SAC</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61573895897444" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/strucbim" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>strucbim@gmail.com</p>
+          <p>+51 982 409 534</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 WB StrucBIM SAC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
