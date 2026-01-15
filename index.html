@@ -14,17 +14,104 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    /* Mantenemos tus estilos base aquí (resumen de styles.css) */
+    :root {
+      --primary-color: #003366;
+      --accent-color: #00aaff;
+    }
+
+    /* --- TUS AJUSTES SOLICITADOS (LOGO Y JUSTIFICADO) --- */
+    .brand-logo img {
+      height: 140px !important; /* Logo grande en PC */
+      width: auto !important;
+      transition: all 0.3s ease;
+    }
+
+    .about-text p {
+      text-align: justify !important; /* Texto justificado */
+      line-height: 1.8;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #0056b3 0%, #00aaff 100%) !important;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 100, 255, 0.2);
+    }
+
+    /* --- OPTIMIZACIÓN PARA CELULARES (RESPONSIVE) --- */
+    @media (max-width: 768px) {
+      /* Logo más pequeño en celular para que no tape todo */
+      .brand-logo img {
+        height: 65px !important;
+      }
+
+      /* Ocultamos el botón de cotización en el header de móvil para ganar espacio */
+      .header-actions .btn-primary {
+        display: none !important;
+      }
+
+      .contact-mini {
+        display: none !important;
+      }
+
+      /* Convertimos las filas en columnas para que todo encaje verticalmente */
+      .about-grid, .services-grid, .footer-content, .features-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+
+      /* El título del inicio (Hero) más pequeño para que no se corte */
+      .hero h1 {
+        font-size: 2rem !important;
+        text-align: center;
+      }
+
+      .hero-content {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-actions .btn {
+        margin-right: 0 !important;
+        width: 100%;
+      }
+
+      /* En pantallas muy pequeñas, el justificado se ve mal, así que lo centramos */
+      .about-text p, .section-header p {
+        text-align: center !important;
+      }
+
+      .footer-col {
+        text-align: center !important;
+      }
+
+      .footer-contact-item {
+        justify-content: center !important;
+      }
+      
+      .social-links {
+        justify-content: center !important;
+        display: flex;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Floating Actions -->
   <a class="whatsapp-float" href="https://wa.me/51982409534" target="_blank" aria-label="Chat en WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
       <div class="brand-logo">
@@ -55,7 +142,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -72,7 +158,6 @@
     </div>
   </section>
 
-  <!-- Feature Strip -->
   <div class="features-strip">
     <div class="container">
       <div class="features-grid">
@@ -83,7 +168,6 @@
     </div>
   </div>
 
-  <!-- Services Section -->
   <section id="servicios" class="section">
     <div class="container">
       <div class="section-header">
@@ -120,7 +204,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="nosotros" class="section section-bg">
     <div class="container">
       <div class="about-grid">
@@ -134,8 +217,6 @@
               eficiencia de las tecnologías digitales.</p>
             <p>Nuestro equipo está conformado por ingenieros apasionados por la seguridad y la precisión, trabajando
               para entregar proyectos que perduren en el tiempo.</p>
-
-
           </div>
         </div>
 
@@ -155,7 +236,6 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
       <h2>¿Listo para iniciar tu proyecto?</h2>
@@ -166,7 +246,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer id="contacto" class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -214,7 +293,7 @@
   </footer>
 
   <script>
-    // Simple Scroll Animation
+    // Tu script de animaciones se mantiene igual
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -225,17 +304,15 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Navbar Scrolled State
     window.addEventListener('scroll', () => {
       const header = document.querySelector('.site-header');
       if (window.scrollY > 50) {
-        header.style.boxShadow = "var(--shadow-md)";
+        header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
       } else {
-        header.style.boxShadow = "var(--shadow-sm)";
+        header.style.boxShadow = "none";
       }
     });
 
-    // Mobile Menu Toggle (Simple implementation)
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.main-nav');
 
@@ -245,7 +322,6 @@
       });
     }
 
-    // Close menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (nav.classList.contains('active')) {
@@ -255,5 +331,4 @@
     });
   </script>
 </body>
-
 </html>
